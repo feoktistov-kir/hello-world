@@ -16,7 +16,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         privateKey: ${{ secrets.KEY }}
-        local: "."
-        remote: scp/directory
+        local: "/"
+        remote: /var/www/nrtk
         
         
