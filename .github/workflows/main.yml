@@ -16,7 +16,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         privateKey: ${{ secrets.KEY }}
-        local: "/"
+        local: "test.txt"
         remote: /var/www/nrtk
         
         
