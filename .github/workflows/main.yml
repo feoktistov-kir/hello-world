@@ -16,6 +16,6 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         key: ${{ secrets.KEY }}
-        source: "/"
+        source: "*"
         target: "/var/www/nrtk"
         use_insecure_cipher : true
