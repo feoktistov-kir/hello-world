@@ -10,13 +10,13 @@ jobs:
 
     steps:
     - name: copy file via ssh key
-      uses: appleboy/scp-action@master
+      uses: garygrossgarten/github-action-scp@release
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
-        key: ${{ secrets.KEY }}
-        source: "./*"
-        target: "/var/www/nrtk/"
-        use_insecure_cipher : true
+        privateKey: ${{ secrets.KEY }}
+        local: "."
+        remote: scp/directory
+        
         
