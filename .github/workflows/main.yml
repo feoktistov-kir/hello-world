@@ -9,14 +9,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: copy file via ssh key
-      uses: garygrossgarten/github-action-scp@release
+    - uses: actions/checkout@master
+    - name: copy file via ssh password
+      uses: appleboy/scp-action@master
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
-        privateKey: ${{ secrets.KEY }}
-        local: "test.txt"
-        remote: /var/www/nrtk
+        key: ${{ secrets.KEY }}
+        source: "./*"
+        target: "/var/www/nrtk"
         
         
